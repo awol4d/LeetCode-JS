@@ -1,0 +1,19 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var numIdenticalPairs = function(nums) {
+    //count to keep track of matches
+    let count = 0;
+    //loop through nums array
+    for(let i = 0; i < nums.length; i++){
+        //loop through nums array but starting one index greater to compare
+        for(let j = i+1; j < nums.length; j++){
+        //compare the array elements as each loop iterates, if match, increment counter
+            if(nums[i] == nums[j]){
+                count++;
+            }
+        }
+    }
+    return count;
+};
