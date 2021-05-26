@@ -1,0 +1,12 @@
+/**
+ * @param {number} num
+ * @return {boolean}
+ */
+var isPerfectSquare = function(num) {
+    let sqrt = Math.floor(Math.sqrt(num));
+            
+    if(sqrt * sqrt == num){
+        return true;
+    }
+    return false;
+};
