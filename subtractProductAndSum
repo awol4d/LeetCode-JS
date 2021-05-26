@@ -1,0 +1,21 @@
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var subtractProductAndSum = function(n) {
+    //turn integer into an array of numbers as strings
+    let numArr = n.toString().split("");
+    
+    //use reduce() to parse strings back into integers, add them and store in sum variable
+    let sum = numArr.reduce(function(a, b){
+        return parseInt(a) + parseInt(b);
+    }, 0);
+    
+    //use reduce() to parse strings back into integers, multiply them and store in product variable
+    let product = numArr.reduce(function(a, b){
+        return parseInt(a) * parseInt(b);
+        //Use 1 as current value when multiplying
+    }, 1);
+    //subtract the sum from the product
+    return product - sum;
+};
